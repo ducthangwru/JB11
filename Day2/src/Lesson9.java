@@ -8,25 +8,18 @@ public class Lesson9 {
         int b = 0;
         boolean d = true;
 
-        try {
-            System.out.println("Nhập vào 1 số thực: ");
-            a = input.nextDouble(); //hoặc float a = input.nextFloat();
-            System.out.println("Nhập vào 1 ký tự: ");
-            c = input.next();
-            System.out.println("Nhap vào 1 số nguyên: ");
-            b = input.nextInt(); //hoặc long - nextLong(); short - nextShort(); byte - nextByte();
-            System.out.println("Nhập vào giá trị boolean: ");
-            d = input.nextBoolean();
-        }
-        catch(Exception empty){
-            System.out.println("ERROR!");
-        }
+        System.out.println("Nhập vào 1 số thực: ");
+        a = input.nextDouble(); //hoặc float a = input.nextFloat();
+        System.out.println("Nhập vào 1 ký tự: ");
+        c = input.next();
+        System.out.println("Nhap vào 1 số nguyên: ");
+        b = input.nextInt(); //hoặc long - nextLong(); short - nextShort(); byte - nextByte();
+        System.out.println("Nhập vào giá trị boolean: ");
+        d = input.nextBoolean();
 
         System.out.println("Gia tri a = " + a);
         System.out.println("Gia tri b = " + b);
         System.out.println("Gia tri c = " + c);
         System.out.println("Gia tri d = " + d);
-
-        input.close();
     }
 }
