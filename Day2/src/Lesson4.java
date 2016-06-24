@@ -2,18 +2,17 @@
 public class Lesson4 {
     public static void main(String[] args) {
         //khai báo và khởi tạo biến
-        int a = 4;
-        float b = (float) 3.4;
-        double c = (double) 2.34;
+        int a = 40;
+        float b = 3.4f;
+        double c = 2.34;
         boolean d = true;
         char e = 's';
-        long f = 2323;
+        long f = 4000000000000000000L;
         short g = 422;
         byte h = 21;
 
         //khai báo hằng
-        final float PI = (float) 3.14;
-
+        final float PI = 3.14f;
         System.out.println("a = " + a);
         System.out.println("b = " + b);
         System.out.println("c = " + c);

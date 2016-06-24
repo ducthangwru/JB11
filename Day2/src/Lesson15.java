@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.jar.Attributes;
 
 public class Lesson15 {
     public static void main(String[] args) {
@@ -18,9 +17,9 @@ public class Lesson15 {
 
         if(BMI < 18.5)
             System.out.println(Name + " Chỉ số BMI = " + BMI + " - Quá gầy");
-        else if(BMI >= 18.5 && BMI < 25)
+        else if(BMI < 25)
             System.out.println(Name + " Chỉ số BMI = " + BMI + " - Thân hình chuẩn");
-        else if(BMI >= 25 && BMI <= 30)
+        else if(BMI <= 30)
             System.out.println(Name + " Chỉ số BMI = " + BMI + " - Thừa Cân");
         else
             System.out.println(Name + " Chỉ số BMI = " + BMI + " - Siêu thừa cân");
