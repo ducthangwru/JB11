@@ -7,7 +7,7 @@ public class Lesson19 {
         Number = input.nextInt();
         switch (Number){
             case 1:
-                System.out.println("OMột!");
+                System.out.println("Một!");
                 break;
             case 2:
                 System.out.println("Hai!");
