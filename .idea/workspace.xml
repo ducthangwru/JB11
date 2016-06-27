@@ -3,27 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="42b9062e-f9c7-45c7-90e1-db49cd72ce82" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Day1/src/Lesson1.java" afterPath="$PROJECT_DIR$/Day1/src/Lesson1.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Day1/src/Lesson2.java" afterPath="$PROJECT_DIR$/Day1/src/Lesson2.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Day2/src/Lesson11.java" afterPath="$PROJECT_DIR$/Day2/src/Lesson11.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Day2/src/Lesson12.java" afterPath="$PROJECT_DIR$/Day2/src/Lesson12.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Day2/src/Lesson14.java" afterPath="$PROJECT_DIR$/Day2/src/Lesson14.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Day2/src/Lesson15.java" afterPath="$PROJECT_DIR$/Day2/src/Lesson15.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Day2/src/Lesson16.java" afterPath="$PROJECT_DIR$/Day2/src/Lesson16.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Day2/src/Lesson18.java" afterPath="$PROJECT_DIR$/Day2/src/Lesson18.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Day2/src/Lesson19.java" afterPath="$PROJECT_DIR$/Day2/src/Lesson19.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Day2/src/Lesson20.java" afterPath="$PROJECT_DIR$/Day2/src/Lesson20.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Day2/src/Lesson6.java" afterPath="$PROJECT_DIR$/Day2/src/Lesson6.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Day2/src/Lesson7.java" afterPath="$PROJECT_DIR$/Day2/src/Lesson7.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Day2/src/Lesson9.java" afterPath="$PROJECT_DIR$/Day2/src/Lesson9.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Day3/src/Lesson5.java" afterPath="$PROJECT_DIR$/Day3/src/Lesson5.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Day4/src/Lesson12.java" afterPath="$PROJECT_DIR$/Day4/src/Lesson12.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Day4/src/Lesson13.java" afterPath="$PROJECT_DIR$/Day4/src/Lesson13.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Day4/src/Lesson14.java" afterPath="$PROJECT_DIR$/Day4/src/Lesson14.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Day4/src/Lesson19.java" afterPath="$PROJECT_DIR$/Day4/src/Lesson19.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Day4/src/Lesson2.java" afterPath="$PROJECT_DIR$/Day4/src/Lesson2.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Day4/src/Lesson21.java" afterPath="$PROJECT_DIR$/Day4/src/Lesson21.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Day4/src/Lesson3.java" afterPath="$PROJECT_DIR$/Day4/src/Lesson3.java" />
     </list>
     <ignored path="JB11.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -878,7 +857,14 @@
       <option name="project" value="LOCAL" />
       <updated>1467032331895</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="commit">
+      <created>1467032872399</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1467032872399</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="ToolWindowManager">
