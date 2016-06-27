@@ -13,16 +13,16 @@ public class Lesson5 {
         choose = (char) System.in.read();
 
         switch (choose) {
-            case 43:
+            case '+':
                 System.out.println("Tổng 2 số là: " + (a + b));
                 break;
-            case 45:
+            case '-':
                 System.out.println("Hiệu 2 số là: " + (a - b));
                 break;
-            case 42:
+            case '*':
                 System.out.println("Tích 2 số là: " + (a * b));
                 break;
-            case 47:
+            case '/':
                 System.out.println("Thương 2 số là: " + (float) a / b );
             break;
             default:
