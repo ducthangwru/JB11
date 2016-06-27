@@ -8,7 +8,7 @@ public class Lesson20 {
         System.out.println("Mời nhập tháng: ");
         Month = input.nextInt();
 
-        switch (Month){
+        switch (Month) {
             case 1:
                 System.out.println("Tháng 1");
                 break;

@@ -1,5 +1,5 @@
-public class Lesson6{
-    public static void main(String args[]){
+public class Lesson6 {
+    public static void main(String args[]) {
         //compareTo(String str) so sánh chuỗi phân biệt chữ hoa chữ thường
         String s1 = "abcd";
         String s2 = "abcd";

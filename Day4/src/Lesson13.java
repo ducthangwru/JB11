@@ -13,7 +13,7 @@ public class Lesson13 {
 
         a = new int[length];
         for (int i = 0; i < length; i++) {
-            System.out.print("Nhập phần tử thứ " + (i+1) + " ");
+            System.out.print("Nhập phần tử thứ " + (i + 1) + " ");
             a[i] = input.nextInt();
         }
 
@@ -22,8 +22,10 @@ public class Lesson13 {
             System.out.print(a[i] + "  ");
         }
 
-        max = a[0]; indexMax = 0;
-        min = a[0]; indexMin = 0;
+        max = a[0];
+        indexMax = 0;
+        min = a[0];
+        indexMin = 0;
 
         for (int i = 0; i < length; i++) {
             if (a[i] > max) {

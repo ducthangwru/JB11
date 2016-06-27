@@ -4,13 +4,13 @@ public class Lesson2 {
 
         //Vòng lặp for
         System.out.println("Vòng lặp For");
-        for(int i = 0; i <= x; i++) {
+        for (int i = 0; i <= x; i++) {
             System.out.println(i);
         }
 
         //vòng lặp while
         System.out.println("Vòng lặp While");
-        while(y < 0) {
+        while (y < 0) {
             System.out.println(y);
             y++;
         }
@@ -20,6 +20,6 @@ public class Lesson2 {
         do {
             System.out.println(y);
             y++;
-        } while(y < 0);
+        } while (y < 0);
     }
 }

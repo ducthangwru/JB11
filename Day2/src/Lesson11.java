@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class Lesson11 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -8,6 +9,6 @@ public class Lesson11 {
         System.out.println("Bạn vừa nhập là " + F + " độ F");
 
         float C = (float) ((F - 32) / 1.8);
-        System.out.println(F +" độ F ==> " + C + " độ C");
+        System.out.println(F + " độ F ==> " + C + " độ C");
     }
 }

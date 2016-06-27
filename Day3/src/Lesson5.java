@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import java.io.*;
+
 public class Lesson5 {
     public static void main(String[] args) throws IOException {
         Scanner input = new Scanner(System.in);
@@ -23,8 +24,8 @@ public class Lesson5 {
                 System.out.println("Tích 2 số là: " + (a * b));
                 break;
             case '/':
-                System.out.println("Thương 2 số là: " + (float) a / b );
-            break;
+                System.out.println("Thương 2 số là: " + (float) a / b);
+                break;
             default:
                 System.out.println("Bạn nhập sai!");
                 break;

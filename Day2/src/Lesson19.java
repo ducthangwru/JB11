@@ -1,11 +1,12 @@
 import java.util.Scanner;
+
 public class Lesson19 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int Number;
         System.out.println("Mời nhập số (1 - 9): ");
         Number = input.nextInt();
-        switch (Number){
+        switch (Number) {
             case 1:
                 System.out.println("Một!");
                 break;

@@ -13,8 +13,8 @@ public class Lesson19 {
 
     public static void Swap(int x, int y) {
         int temp = x;
-            x = y;
-            y = temp;
+        x = y;
+        y = temp;
         System.out.println("2 số vừa được hoán vị là: " + x + "  " + y);
     }
 }

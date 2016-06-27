@@ -48,13 +48,13 @@ public class Lesson14 {
         } while (indexAdd < 0 || indexAdd >= length);
 
         length++;
-        for(int i = length - 1; i >  indexAdd; i--) {
+        for (int i = length - 1; i > indexAdd; i--) {
             a[i] = a[i - 1];
         }
         a[indexAdd] = element;
 
         System.out.println("Mảng vừa thêm phần tử là: ");
-        for(int i = 0; i < length; i++) {
+        for (int i = 0; i < length; i++) {
             System.out.print(a[i] + "  ");
         }
 
@@ -67,7 +67,7 @@ public class Lesson14 {
         a[indexChange] = changeElement;
 
         System.out.println("Mảng vừa thay đổi là: ");
-        for(int i = 0; i < length; i++) {
+        for (int i = 0; i < length; i++) {
             System.out.print(a[i] + "  ");
         }
     }
