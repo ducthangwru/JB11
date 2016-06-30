@@ -12,15 +12,13 @@ public class Lesson3 {
         System.out.println("Nhập vào ngày: ");
         q = input.nextInt();
 
-        j = y / 100;
-        k = y % 100;
-
         if (m == 1 || m == 2) {
             y--;
             m += 12;
-            j = y / 100;
-            k = y % 100;
         }
+
+        j = y / 100;
+        k = y % 100;
 
         h = (q + (26 * (m + 1) / 10) + k + k / 4 + j / 4 + 5 * j) % 7;
 
