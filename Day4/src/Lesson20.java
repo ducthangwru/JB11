@@ -4,32 +4,32 @@ public class Lesson20 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         String[] arr;
-        int element;
-
+        int length;
         System.out.println("Nhập số phần tử: ");
-        element = input.nextInt();
+        length = input.nextInt();
         System.out.println("Nhập các phần tử trong chuỗi: ");
-        arr = new String[element];
+        arr = new String[length];
 
         for(int i = 0; i < arr.length; i++) {
             System.out.println("Nhập chuỗi " + (i+1) + ": ");
             arr[i] = input.next();
         }
 
-        reverseArray(arr);
+        arr = reverseArray(arr);
+        System.out.println("Chuỗi đảo là: ");
+        for(int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + "  ");
+        }
 
     }
 
-    public static int reverseArray(String[] arr) {
-        String[] arr2 = new String[arr.length];
-        for(int i = 0; i < arr.length; i++) {
-            arr2[i] = arr[arr.length - 1 - i];
-        }
+    public static String[] reverseArray(String[] arr) {
+        String[] array;
+        array = new String [arr.length];
 
-        System.out.println("Chuỗi đảo ngược: ");
-        for(int i = 0; i < arr2.length; i++) {
-            System.out.println(arr2[i] + "  ");
+        for(int i = 0; i < array.length; i++) {
+            array[i] = arr[arr.length - 1 - i];
         }
-        return 0;
+        return array;
     }
 }

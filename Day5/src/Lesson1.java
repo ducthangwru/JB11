@@ -10,51 +10,18 @@ public class Lesson1 {
         System.out.println("Nhập vào năm: ");
         year = input.nextInt();
 
+        printMonth(year, month);
+
+    }
+
+    public static void printMonth(int year, int month) {
         printMonthTitle(year, month);
         System.out.println();
         printMonthBody(year, month);
     }
 
-    public static boolean isLeapYear(int year) {
-        return (year % 400 == 0 || (year % 100 != 0 && year % 4 == 0));
-    }
-
-    public static int getNumberOfDayInMonth(int year, int month) {
-        int day;
-        if (month == 2) {
-            if (isLeapYear(year))
-                day = 29;
-            else
-                day = 28;
-        }
-        else {
-            if(month == 4 || month == 6 || month == 9 || month == 11)
-                day = 30;
-            else
-                day = 31;
-        }
-
-        return day;
-    }
-
-    public static int getStartDay(int year, int month) {
-        int h, k, j;
-
-        if (month == 1 || month == 2) {
-            year--;
-            month += 12;
-        }
-
-        j = year / 100;
-        k = year % 100;
-
-        h = (1 + 26 * (month + 1) / 10 + k + k / 4 + j / 4 + 5 * j) % 7;
-
-        return h;
-    }
-
     public static void printMonthBody(int year, int month) {
-            int count = 0, dates =  1;
+        int count = 0, dates =  1;
         switch (getStartDay(year, month)) {
             case 0:
                 count = 0;
@@ -78,7 +45,7 @@ public class Lesson1 {
                 count = 30;
                 break;
         }
-        
+
         int day = getNumberOfDayInMonth(year, month);
 
         for(int k = 0; k < count; k++) {
@@ -93,8 +60,8 @@ public class Lesson1 {
             count = 0;
             System.out.println();
         }
-        
     }
+
     public static void printMonthTitle(int year, int month) {
         String NameMonth = null;
         switch (month) {
@@ -143,5 +110,44 @@ public class Lesson1 {
         }
 
         System.out.printf("\n%4s %4s %4s %4s %4s %4s %4s", "Sat", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri");
+    }
+
+
+    public static boolean isLeapYear(int year) {
+        return (year % 400 == 0 || (year % 100 != 0 && year % 4 == 0));
+    }
+
+    public static int getNumberOfDayInMonth(int year, int month) {
+        int day;
+        if (month == 2) {
+            if (isLeapYear(year))
+                day = 29;
+            else
+                day = 28;
+        }
+        else {
+            if(month == 4 || month == 6 || month == 9 || month == 11)
+                day = 30;
+            else
+                day = 31;
+        }
+
+        return day;
+    }
+
+    public static int getStartDay(int year, int month) {
+        int h, k, j;
+
+        if (month == 1 || month == 2) {
+            year--;
+            month += 12;
+        }
+
+        j = year / 100;
+        k = year % 100;
+
+        h = (1 + 26 * (month + 1) / 10 + k + k / 4 + j / 4 + 5 * j) % 7;
+
+        return h;
     }
 }
