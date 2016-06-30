@@ -39,17 +39,17 @@ public class Lesson1 {
     }
 
     public static int getStartDay(int year, int month) {
-        int h, k, j, m = month, y =  year;
+        int h, k, j;
 
         if (month == 1 || month == 2) {
-            y--;
-            m += 12;
+            year--;
+            month += 12;
         }
 
-        j = y / 100;
-        k = y % 100;
+        j = year / 100;
+        k = year % 100;
 
-        h = (1 + 26 * (m + 1) / 10 + k + k / 4 + j / 4 + 5 * j) % 7;
+        h = (1 + 26 * (month + 1) / 10 + k + k / 4 + j / 4 + 5 * j) % 7;
 
         return h;
     }
