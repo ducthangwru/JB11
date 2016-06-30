@@ -1,4 +1,3 @@
-import javax.print.attribute.standard.MediaSize;
 import java.util.Scanner;
 
 public class Lesson1 {
