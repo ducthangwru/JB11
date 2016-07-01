@@ -12,13 +12,13 @@ public class Lesson13 {
         } while (length <= 0);
 
         a = new int[length];
-        for (int i = 0; i < length; i++) {
+        for (int i = 0; i < a.length; i++) {
             System.out.print("Nhập phần tử thứ " + (i + 1) + " ");
             a[i] = input.nextInt();
         }
 
         System.out.println("Mảng vừa nhập là: ");
-        for (int i = 0; i < length; i++) {
+        for (int i = 0; i < a.length; i++) {
             System.out.print(a[i] + "  ");
         }
 
@@ -27,7 +27,7 @@ public class Lesson13 {
         min = a[0];
         indexMin = 0;
 
-        for (int i = 0; i < length; i++) {
+        for (int i = 0; i < a.length; i++) {
             if (a[i] > max) {
                 max = a[i];
                 indexMax = i;
