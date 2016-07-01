@@ -30,8 +30,7 @@ public class Lesson4 {
         int value = array[0];
         for(int i = 0; i < array.length; i++) {
             if(value > array[i]) {
-                value = 0;
-                break;
+                return false;
             }
             else
                 value = array[i];

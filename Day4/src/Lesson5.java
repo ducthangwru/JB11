@@ -1,6 +1,3 @@
-import jdk.nashorn.internal.ir.WhileNode;
-import jdk.nashorn.internal.runtime.arrays.NumericElements;
-
 import java.util.Scanner;
 
 public class Lesson5 {

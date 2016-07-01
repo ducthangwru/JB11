@@ -10,7 +10,9 @@ public class Lesson4 {
         long f = 4000000000000000000L;
         short g = 422;
         byte h = 21;
-
+        String s = "1";
+        String s1 = "2";
+        System.out.println(Integer.parseInt(s) + Integer.parseInt(s1));
         //khai báo hằng
         final float PI = 3.14f;
         System.out.println("a = " + a);
