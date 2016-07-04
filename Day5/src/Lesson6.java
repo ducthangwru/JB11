@@ -77,7 +77,7 @@ public class Lesson6 {
                 str = str + arr[i];
         }
         if (!isTrue(str))
-            System.out.println("Bạn nhập sai toán tử");
+            System.out.println("Nhập sai toán tử!");
         else {
             System.out.println("Kết quả: " + getResult(str));
         }
