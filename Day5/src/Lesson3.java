@@ -9,10 +9,12 @@ public class Lesson3 {
         System.out.println("Nhập mã thẻ: ");
         number = input.nextLong();
 
-        if (isValid(number))
-            System.out.println("Mã thẻ " + number + " hợp lệ");
-        else
-            System.out.println("Mã thẻ " + number + " không hợp lệ");
+        if(number != 0) {
+            if (isValid(number))
+                System.out.println("Mã thẻ " + number + " hợp lệ");
+            else
+                System.out.println("Mã thẻ " + number + " không hợp lệ");
+        }
     }
 
     public static boolean isValid(long number) {
