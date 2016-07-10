@@ -21,24 +21,12 @@ public class Student {
         this.StudentCode = studentCode;
     }
 
-    public String getName() {
-        return Name;
-    }
-
     public void setName(String name) {
         this.Name = name;
     }
 
-    public String getGender() {
-        return Gender;
-    }
-
     public void setGender(String gender) {
         this.Gender = gender;
-    }
-
-    public String getAddress() {
-        return Address;
     }
 
     public void setAddress(String address) {
