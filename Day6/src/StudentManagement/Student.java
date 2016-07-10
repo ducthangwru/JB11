@@ -3,10 +3,10 @@ package StudentManagement;
 import java.util.Scanner;
 
 public class Student {
-    private String Name = "";
-    private String Gender = "";
-    private String Address = "";
-    private int StudentCode = 0;
+    private String Name;
+    private String Gender;
+    private String Address;
+    private int StudentCode;
 
     Scanner input = new Scanner(System.in);
 
