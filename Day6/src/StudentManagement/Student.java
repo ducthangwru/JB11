@@ -49,6 +49,7 @@ public class Student {
         System.out.println("Nhập mã sinh viên: ");
         StudentCode = input.nextInt();
         setStudentCode(StudentCode);
+        input.nextLine();
 
         System.out.println("Nhập Họ tên: ");
         Name = input.nextLine();
@@ -57,18 +58,20 @@ public class Student {
         System.out.println("Nhập giới tính: ");
         Gender = input.next();
         setGender(Gender);
+        input.nextLine();
 
         System.out.println("Nhập địa chỉ: ");
         Address = input.nextLine();
         setAddress(Address);
+        input.nextLine();
     }
 
     public void DisplayStudent() {
         System.out.println("------------------------------------");
-        System.out.print("Mã Sinh Viên: " + StudentCode);
-        System.out.print("Họ Tên: " + Name);
-        System.out.print("Giới Tính: " + Gender);
-        System.out.print("Địa chỉ: " + Address);
-        System.out.println("------------------------------------");
+        System.out.println("Mã Sinh Viên: " + StudentCode);
+        System.out.println("Họ Tên: " + Name);
+        System.out.println("Giới Tính: " + Gender);
+        System.out.println("Địa chỉ: " + Address);
+        System.out.println();
     }
 }
