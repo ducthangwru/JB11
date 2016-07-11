@@ -48,11 +48,9 @@ public class Main {
                 case 4:
                     System.out.println("\nNhập mã Sinh Viên cần xóa: ");
                     studentCode = input.nextInt();
-                    if(studentManager.DeleteStudent(studentCode)) {
+                    if (studentManager.DeleteStudent(studentCode)) {
                         System.out.println("Xóa thành công!\n\n");
-                    }
-
-                    else {
+                    } else {
                         System.out.println("Xóa không thành công!\n\n");
                     }
                     break;

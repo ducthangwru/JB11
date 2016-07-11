@@ -5,6 +5,10 @@ import java.util.Scanner;
 public class StudentManager {
     public int length = 0;
     Student[] students = new Student[100];
+    String name;
+    String gender;
+    String address;
+    int studentcode;
 
     Scanner input = new Scanner(System.in);
 
@@ -17,7 +21,7 @@ public class StudentManager {
 
     public void ImportStudent() {
         System.out.println("Nhập thông tin sinh viên: ");
-        for(int i = 0; i < length; i++) {
+        for (int i = 0; i < length; i++) {
             System.out.println("Nhập sinh viên thứ " + (i + 1));
             students[i] = new Student();
             students[i].InputStudent();
@@ -25,7 +29,7 @@ public class StudentManager {
     }
 
     public void SeeTheListStudent() {
-        for(int i = 0; i < length; i++) {
+        for (int i = 0; i < length; i++) {
             students[i].DisplayStudent();
         }
     }
@@ -33,31 +37,31 @@ public class StudentManager {
     public void EditStudent(int StudentsCode) {
         boolean check = false;
 
-        for(int i = 0; i < length; i++) {
-            if(StudentsCode == students[i].getStudentCode()) {
+        for (int i = 0; i < length; i++) {
+            if (StudentsCode == students[i].getStudentCode()) {
                 System.out.println("Nhập mã sinh viên mới: ");
-                int studentcode = input.nextInt();
+                studentcode = input.nextInt();
                 students[i].setStudentCode(studentcode);
                 input.nextLine();
 
                 System.out.println("Nhập tên mới: ");
-                String name = input.nextLine();
+                name = input.nextLine();
                 students[i].setName(name);
 
                 System.out.println("Nhập giới tính mới: ");
-                String gender = input.next();
+                gender = input.next();
                 students[i].setGender(gender);
                 input.nextLine();
 
                 System.out.println("Nhập địa chỉ mới: ");
-                String address = input.nextLine();
+                address = input.nextLine();
                 students[i].setAddress(address);
 
                 check = true;
             }
         }
 
-        if(!check) {
+        if (!check) {
             System.out.println("Không có sinh viên nào có mã sinh viên là: " + StudentsCode);
             input.nextLine();
         }
@@ -87,21 +91,21 @@ public class StudentManager {
         students[length - 1] = new Student();
         System.out.println("Nhập thông tin sinh viên cần thêm: ");
         System.out.println("Nhập mã sinh viên mới: ");
-        int studentcode = input.nextInt();
+        studentcode = input.nextInt();
         students[length - 1].setStudentCode(studentcode);
         input.nextLine();
 
         System.out.println("Nhập Họ Tên: ");
-        String name = input.nextLine();
+        name = input.nextLine();
         students[length - 1].setName(name);
 
         System.out.println("Nhập giới tính: ");
-        String gender = input.next();
+        gender = input.next();
         students[length - 1].setGender(gender);
         input.nextLine();
 
         System.out.println("Nhập địa chỉ: ");
-        String address = input.nextLine();
+        address = input.nextLine();
         students[length - 1].setAddress(address);
     }
 }
