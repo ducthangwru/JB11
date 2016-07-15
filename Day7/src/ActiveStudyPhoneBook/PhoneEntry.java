@@ -34,4 +34,8 @@ public class PhoneEntry {
         return Number;
     }
 
+    public String ToString() {
+        return getNumber() + "\t\t" + getName() + "\t\t" + getPhoneNumber();
+    }
+
 }

@@ -2,39 +2,43 @@ package ActiveStudyPhoneBook;
 
 public class PhoneBook {
     private int numberOfEntries = 1;
-    private PhoneEntry[] phoneEntry = new PhoneEntry[100];
+    private PhoneEntry[] phoneEntry;
 
     public PhoneBook() {
+        phoneEntry = new PhoneEntry[numberOfEntries];
+    }
+
+    public int GetNumberOfEntries() {
+        return numberOfEntries;
     }
 
     public void setNumberOfEntries(int numberOfEntries) {
         this.numberOfEntries = numberOfEntries;
     }
 
-    public void ImportPhoneEntry(int count, int Number, String name, String phoneNumber) {
-            phoneEntry[count] = new PhoneEntry(Number, name, phoneNumber);
-    }
 
-    public void SeeTheListPhoneEntry() {
-        for(int i = 0; i < numberOfEntries; i++) {
-            System.out.println("Mã liên hệ: " + phoneEntry[i].getNumber());
-            System.out.println("Tên: " + phoneEntry[i].getName());
-            System.out.println("Số điện thoại: " + phoneEntry[i].getPhoneNumber());
-            System.out.println("---------------------");
-        }
-    }
-
-    public boolean AddEntry(int Number, String name, String phoneNumber) {
-        boolean check = false;
+    public boolean AddEntry(PhoneEntry entry) {
+        PhoneEntry[] newPhoneEntry = new PhoneEntry[numberOfEntries];
         if(numberOfEntries + 1 < 100) {
+            newPhoneEntry[numberOfEntries  - 1] = entry;
             numberOfEntries++;
-            phoneEntry[numberOfEntries - 1] = new PhoneEntry(Number, name, phoneNumber);
-            check = true;
+            setNumberOfEntries(numberOfEntries);
+            phoneEntry = newPhoneEntry;
+            return true;
         }
-        return check;
+        else
+            return false;
     }
 
-    public void EditPhoneEntry(int index, String name, String phoneNumber) {
+    public String SeeTheListPhoneEntry() {
+        String ToString = "";
+        for(int i = 0; i < GetNumberOfEntries(); i++) {
+            ToString = ToString + phoneEntry[i].ToString() + "\n";
+        }
+        return ToString;
+    }
+
+   public void EditPhoneEntry(int index, String name, String phoneNumber) {
         phoneEntry[index].setName(name);
         phoneEntry[index].setPhoneNumber(phoneNumber);
     }
@@ -59,18 +63,15 @@ public class PhoneBook {
         return index;
     }
 
-    public void DeletePhoneEntry(int index, int Number) {
+    public void DeletePhoneEntry(int index) {
         for (int i = index; i < numberOfEntries - 1; i++) {
             phoneEntry[i] = phoneEntry[i + 1];
         }
         numberOfEntries--;
     }
 
-    public void SearchPhoneEntry(int index, int Number) {
-        System.out.println("------TÌM THẤY LIÊN HỆ--------");
-        System.out.println("Mã liên hệ: " + phoneEntry[index].getNumber());
-        System.out.println("Tên: " + phoneEntry[index].getName());
-        System.out.println("Số điện thoại: " + phoneEntry[index].getPhoneNumber());
-        System.out.println("------------------------------");
+    public void SearchPhoneEntry(int index) {
+        phoneEntry[index].ToString();
     }
+
 }

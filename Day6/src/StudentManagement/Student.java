@@ -13,6 +13,13 @@ public class Student {
     public Student() {
     }
 
+    public Student(int StudentCode, String Name, String Gender, String Address) {
+        this.StudentCode = StudentCode;
+        this.Name = Name;
+        this.Address = Address;
+        this.Gender = Gender;
+    }
+
     public int getStudentCode() {
         return StudentCode;
     }
