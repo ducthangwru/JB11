@@ -60,6 +60,7 @@ public class Main {
         } while(true);
     }
 
+    
     public static void AddPhoneEntry() {
         System.out.println("Nhập thông tin liên hệ cần thêm: ");
         input.nextLine();
