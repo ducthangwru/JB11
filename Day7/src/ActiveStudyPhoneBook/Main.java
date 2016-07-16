@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class Main {
     private static PhoneBook phoneBook = new PhoneBook();
     static Scanner input = new Scanner(System.in);
-    static int Number;
     static String Name, PhoneNumber;
 
     public static void main(String[] args) {
@@ -14,9 +13,9 @@ public class Main {
         do {
             System.out.println("------DANH BẠ ĐIỆN THOẠI-------");
             System.out.println("1. Thêm một liên hệ.");
-            System.out.println("2. Sửa liên hệ.");
+            System.out.println("2. Sửa tên liên hệ.");
             System.out.println("3. Xóa liên hệ.");
-            System.out.println("4. Tìm kiếm liên hệ.");
+            System.out.println("4. Tìm kiếm liên hệ bằng tên.");
             System.out.println("5. Hiển thị tất cả liên hệ.");
             System.out.println("0. Thoát.");
             System.out.println("Mời lựa chọn chức năng: ");
@@ -28,23 +27,15 @@ public class Main {
                     break;
                 case 1:
                     AddPhoneEntry();
-                    PhoneEntry newPhoneEntry = new PhoneEntry(Number, Name, PhoneNumber);
-                    phoneBook.AddEntry(newPhoneEntry);
-
-                    if(phoneBook.AddEntry(newPhoneEntry)) {
-                        System.out.println("Thêm thành công!");
-                    }
-                    else
-                        System.out.println("Bộ nhớ đầy! Thêm không thành công!");
                     break;
                 case 2:
-                    EditPhoneEntry();
+                    EditContactName();
                     break;
                 case 3:
                     DeletePhoneEntry();
                     break;
                 case 4:
-                    SearchPhoneEntry();
+                    findPhoneEntryByName();
                     break;
                 case 5:
                     DisplayEntry();
@@ -64,63 +55,64 @@ public class Main {
         System.out.println("Nhập thông tin liên hệ cần thêm: ");
         input.nextLine();
 
-        System.out.println("Nhập mã liên hệ: ");
-        Number = input.nextInt();
-        input.nextLine();
-
         System.out.println("Nhập tên liên hệ: ");
         Name = input.nextLine();
         input.nextLine();
 
         System.out.println("Nhập số điện thoại: ");
         PhoneNumber = input.next();
+
+        PhoneEntry newPhoneEntry = new PhoneEntry(Name, PhoneNumber);
+
+        if(phoneBook.AddEntry(newPhoneEntry)) {
+            System.out.println("Thêm thành công!");
+        }
+        else
+            System.out.println("Bộ nhớ đầy! Thêm không thành công!");
     }
 
-    public static void SearchPhoneEntry() {
-        System.out.println("Nhập mã liên hệ cần tìm kiếm: ");
-        Number = input.nextInt();
+    public static void findPhoneEntryByName() {
         input.nextLine();
-        int indexCase5 = phoneBook.check(Number);
+        System.out.println("Nhập tên cần tìm: ");
+        String nameContact = input.nextLine();
 
-        if(!phoneBook.CheckPhoneEntry(Number))
+        if(phoneBook.findEntryByName(nameContact) == null)
             System.out.println("Liên hệ không tồn tại!");
         else {
             System.out.println("-------TÌM THẤY LIÊN HỆ--------");
-            phoneBook.SearchPhoneEntry(indexCase5);
+            System.out.println(phoneBook.findEntryByName(nameContact));
         }
     }
 
-    public static void EditPhoneEntry() {
-        System.out.println("Nhập mã liên hệ cần sửa: ");
-        Number = input.nextInt();
+
+    public static void EditContactName() {
         input.nextLine();
-        int indexCase3 = phoneBook.check(Number);
+        System.out.println("Nhập tên cần sửa: ");
+        String oldName = input.nextLine();
 
-        if(!phoneBook.CheckPhoneEntry(Number))
-            System.out.println("Liên hệ không tồn tại!");
+        System.out.println("Nhập tên mới: ");
+        String newName = input.nextLine();
+        input.nextLine();
+
+        System.out.println("Nhập số điện thoại mới: ");
+        String newPhoneNumber = input.next();
+
+        if(phoneBook.modifyEntry(oldName, newName, newPhoneNumber))
+            System.out.println("Liên hệ đã sửa!");
         else {
-            System.out.println("Nhập tên mới: ");
-            Name = input.nextLine();
-            input.nextLine();
-
-            System.out.println("Nhập số điện thoại mới: ");
-            PhoneNumber = input.next();
-
-            phoneBook.EditPhoneEntry(indexCase3, Name, PhoneNumber);
+            System.out.println("Liên hệ không tồn tại!");
         }
     }
 
     public static void DeletePhoneEntry() {
-        System.out.println("Nhập mã liên hệ cần xóa: ");
-        Number = input.nextInt();
+        System.out.println("Nhập tên liên hệ cần xóa: ");
+        String contactName = input.nextLine();
         input.nextLine();
-        int indexCase4 = phoneBook.check(Number);
 
-        if(!phoneBook.CheckPhoneEntry(Number)) {
+        if(!phoneBook.deleteEntry(contactName)) {
             System.out.println("Liên hệ không tồn tại!");
         }
         else {
-            phoneBook.DeletePhoneEntry(indexCase4);
             System.out.println("Xóa thành công!");
         }
     }
@@ -128,7 +120,6 @@ public class Main {
     public static void DisplayEntry () {
         System.out.println("-----DANH SÁCH LIÊN HỆ-------");
         System.out.println("-----------------------------");
-        System.out.println("Mã\t\tHọ Tên\t\tSố điện thoại");
-        phoneBook.SeeTheListPhoneEntry();
+        System.out.println(phoneBook.toString());
     }
 }

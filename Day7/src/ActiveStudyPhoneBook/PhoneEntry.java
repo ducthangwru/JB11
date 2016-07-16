@@ -3,13 +3,11 @@ package ActiveStudyPhoneBook;
 public class PhoneEntry {
     private String Name;
     private String PhoneNumber;
-    private int Number;
 
     public PhoneEntry() {
     }
 
-    public PhoneEntry(int Number, String Name, String PhoneNumber) {
-        this.Number = Number;
+    public PhoneEntry(String Name, String PhoneNumber) {
         this.Name = Name;
         this.PhoneNumber = PhoneNumber;
     }
@@ -19,7 +17,7 @@ public class PhoneEntry {
     }
 
     public void setName(String name) {
-        Name = name;
+        this.Name = name;
     }
 
     public String getPhoneNumber() {
@@ -27,15 +25,14 @@ public class PhoneEntry {
     }
 
     public void setPhoneNumber(String phoneNumber) {
-        PhoneNumber = phoneNumber;
+        this.PhoneNumber = phoneNumber;
     }
 
-    public int getNumber() {
-        return Number;
+    @Override
+    public String toString() {
+        return "PhoneEntry{" +
+                "Name='" + Name + '\'' +
+                ", PhoneNumber='" + PhoneNumber + '\'' +
+                '}';
     }
-
-    public String ToString() {
-        return getNumber() + "\t\t" + getName() + "\t\t" + getPhoneNumber();
-    }
-
 }
