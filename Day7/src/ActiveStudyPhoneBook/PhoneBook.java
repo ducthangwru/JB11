@@ -54,16 +54,27 @@ public class PhoneBook {
 
     public boolean deletePhoneNumber(PhoneEntry PhoneEntry, String entryName) {
         for(int i = 0; i < getNumberOfEntries(); i++) {
-            for (int j = 0; j < PhoneEntry.getSizePhoneNumber(); j++) {
-                if (entryName.equals(phoneEntry.get(i).getName())) {
+            if (entryName.equals(phoneEntry.get(i).getName())) {
+                for(int j = 0; j < PhoneEntry.getSizePhoneNumber(); j++) {
                     phoneEntry.get(i).getPhoneNumber().remove(j);
-                    return true;
+                    j--;
                 }
+            }
+
+            if(phoneEntry.get(i).getSizePhoneNumber() == 0) {
+                return true;
             }
         }
         return false;
     }
 
+    public void deleteArrayPhoneNumber(String oldName) {
+        for (int i = 0; i < getNumberOfEntries(); i++) {
+            if (oldName.equals(phoneEntry.get(i).getName())) {
+                deletePhoneNumber(phoneEntry.get(i), oldName);
+            }
+        }
+    }
     public boolean isDuplicateName(String entryName) {
         for(int i = 0; i < getNumberOfEntries(); i++) {
             System.out.println(entryName.equals(phoneEntry.get(i).getName()));
@@ -94,12 +105,6 @@ public class PhoneBook {
     }
 
     public boolean modifyNumber(String oldName, String newPhoneNumber) {
-        for (int i = 0; i < getNumberOfEntries(); i++) {
-            if (oldName.equals(phoneEntry.get(i).getName())) {
-                deletePhoneNumber(phoneEntry.get(i), oldName);
-            }
-        }
-
         for (int i = 0; i < getNumberOfEntries(); i++) {
             if (oldName.equals(phoneEntry.get(i).getName())) {
                 phoneEntry.get(i).setPhoneNumber(newPhoneNumber);

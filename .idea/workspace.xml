@@ -4,6 +4,7 @@
     <list default="true" id="42b9062e-f9c7-45c7-90e1-db49cd72ce82" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Day7/src/ActiveStudyPhoneBook/Main.java" afterPath="$PROJECT_DIR$/Day7/src/ActiveStudyPhoneBook/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Day7/src/ActiveStudyPhoneBook/PhoneBook.java" afterPath="$PROJECT_DIR$/Day7/src/ActiveStudyPhoneBook/PhoneBook.java" />
     </list>
     <ignored path="JB11.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -79,14 +80,13 @@
       <file leaf-file-name="PhoneEntry.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Day7/src/ActiveStudyPhoneBook/PhoneEntry.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+            <state relative-caret-position="118">
+              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding>
                 <element signature="e#246#247#0" expanded="true" />
                 <element signature="e#287#288#0" expanded="true" />
                 <element signature="e#336#337#0" expanded="true" />
                 <element signature="e#370#371#0" expanded="true" />
-                <element signature="e#401#402#0" expanded="true" />
                 <element signature="e#428#429#0" expanded="true" />
                 <element signature="e#468#469#0" expanded="true" />
                 <element signature="e#500#501#0" expanded="true" />
@@ -97,11 +97,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PhoneBook.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PhoneBook.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Day7/src/ActiveStudyPhoneBook/PhoneBook.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1104">
-              <caret line="97" column="62" selection-start-line="97" selection-start-column="62" selection-end-line="97" selection-end-column="62" />
+            <state relative-caret-position="283">
+              <caret line="70" column="16" selection-start-line="70" selection-start-column="16" selection-end-line="70" selection-end-column="16" />
               <folding>
                 <element signature="e#220#221#0" expanded="true" />
                 <element signature="e#260#261#0" expanded="true" />
@@ -110,14 +110,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Day7/src/ActiveStudyPhoneBook/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="67" column="40" selection-start-line="67" selection-start-column="40" selection-end-line="67" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="136">
+              <caret line="128" column="36" selection-start-line="128" selection-start-column="36" selection-end-line="128" selection-end-column="36" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -976,12 +974,19 @@
       <option name="project" value="LOCAL" />
       <updated>1468825664627</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="commit">
+      <created>1468828130555</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1468828130555</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1026,10 +1031,18 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/Day7/src/ActiveStudyPhoneBook/PhoneBook.java</url>
+          <line>106</line>
+          <properties class="ActiveStudyPhoneBook.PhoneBook" method="modifyNumber" />
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="30" />
+      <option name="time" value="31" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1367,14 +1380,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Day7/src/ActiveStudyPhoneBook/PhoneEntry.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        <state relative-caret-position="118">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding>
             <element signature="e#246#247#0" expanded="true" />
             <element signature="e#287#288#0" expanded="true" />
             <element signature="e#336#337#0" expanded="true" />
             <element signature="e#370#371#0" expanded="true" />
-            <element signature="e#401#402#0" expanded="true" />
             <element signature="e#428#429#0" expanded="true" />
             <element signature="e#468#469#0" expanded="true" />
             <element signature="e#500#501#0" expanded="true" />
@@ -1384,24 +1396,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Day7/src/ActiveStudyPhoneBook/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="67" column="40" selection-start-line="67" selection-start-column="40" selection-end-line="67" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Day7/src/ActiveStudyPhoneBook/PhoneBook.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1104">
-          <caret line="97" column="62" selection-start-line="97" selection-start-column="62" selection-end-line="97" selection-end-column="62" />
+        <state relative-caret-position="283">
+          <caret line="70" column="16" selection-start-line="70" selection-start-column="16" selection-end-line="70" selection-end-column="16" />
           <folding>
             <element signature="e#220#221#0" expanded="true" />
             <element signature="e#260#261#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day7/src/ActiveStudyPhoneBook/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="128" column="36" selection-start-line="128" selection-start-column="36" selection-end-line="128" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>

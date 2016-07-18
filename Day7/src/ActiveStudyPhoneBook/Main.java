@@ -1,6 +1,5 @@
 package ActiveStudyPhoneBook;
 
-import java.awt.font.NumericShaper;
 import java.util.Scanner;
 
 public class Main {
@@ -120,11 +119,12 @@ public class Main {
         System.out.println("1. Có");
         System.out.println("2. Không");
 
-        String newPhoneNumber = null;
+        String newPhoneNumber;
         int Number;
 
         int choose = input.nextInt();
         if(choose == 1) {
+            phoneBook.deleteArrayPhoneNumber(oldName);
             System.out.println("Nhập số các số điện thoại mới: ");
             Number = input.nextInt();
             for(int i = 0; i < Number; i++) {
@@ -134,7 +134,7 @@ public class Main {
             }
         }
 
-        if (phoneBook.modifyEntry(oldName, newName) && phoneBook.modifyNumber(newName, newPhoneNumber))
+        if (phoneBook.modifyEntry(oldName, newName))
             System.out.println("Liên hệ đã sửa!");
         else {
             System.out.println("Liên hệ không tồn tại!");
