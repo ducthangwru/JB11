@@ -3,9 +3,8 @@ import java.util.Scanner;
 public class Lesson5 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int[] a, count;
+        int[] a;
         a = new int[100];
-        count = new int[100];
 
         int i = 0, number;
         System.out.println("Nhập vào số từ 0 -> 100 (Nhập 0 để dừng lại): ");

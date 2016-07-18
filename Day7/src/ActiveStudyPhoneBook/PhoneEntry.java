@@ -1,15 +1,21 @@
 package ActiveStudyPhoneBook;
 
+import java.util.ArrayList;
+
 public class PhoneEntry {
     private String Name;
-    private String PhoneNumber;
+    private ArrayList<String> phoneNumber =  new ArrayList<>();
 
     public PhoneEntry() {
     }
 
-    public PhoneEntry(String Name, String PhoneNumber) {
-        this.Name = Name;
-        this.PhoneNumber = PhoneNumber;
+
+    public int getSizePhoneNumber() {
+        return phoneNumber.size();
+    }
+
+    public ArrayList<String> getPhoneNumber() {
+        return phoneNumber;
     }
 
     public String getName() {
@@ -20,19 +26,15 @@ public class PhoneEntry {
         this.Name = name;
     }
 
-    public String getPhoneNumber() {
-        return PhoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.PhoneNumber = phoneNumber;
+    public void setPhoneNumber(String PhoneNumber) {
+        this.phoneNumber.add(PhoneNumber);
     }
 
     @Override
     public String toString() {
         return "PhoneEntry{" +
                 "Name='" + Name + '\'' +
-                ", PhoneNumber='" + PhoneNumber + '\'' +
+                ", phoneNumber=" + phoneNumber +
                 '}';
     }
 }

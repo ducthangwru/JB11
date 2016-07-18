@@ -1,5 +1,6 @@
 package ActiveStudyPhoneBook;
 
+import java.awt.font.NumericShaper;
 import java.util.Scanner;
 
 public class Main {
@@ -16,7 +17,8 @@ public class Main {
             System.out.println("2. Sửa tên liên hệ.");
             System.out.println("3. Xóa liên hệ.");
             System.out.println("4. Tìm kiếm liên hệ bằng tên.");
-            System.out.println("5. Hiển thị tất cả liên hệ.");
+            System.out.println("5. TÌm kiếm liên hệ bằng tên gợi ý.");
+            System.out.println("6. Hiển thị tất cả liên hệ.");
             System.out.println("0. Thoát.");
             System.out.println("Mời lựa chọn chức năng: ");
 
@@ -38,6 +40,9 @@ public class Main {
                     findPhoneEntryByName();
                     break;
                 case 5:
+                    findPhoneEntryByCharaters();
+                    break;
+                case 6:
                     DisplayEntry();
                     break;
                 default:
@@ -52,17 +57,22 @@ public class Main {
     }
 
     public static void AddPhoneEntry() {
+        PhoneEntry newPhoneEntry = new PhoneEntry();
         System.out.println("Nhập thông tin liên hệ cần thêm: ");
         input.nextLine();
 
         System.out.println("Nhập tên liên hệ: ");
         Name = input.nextLine();
-        input.nextLine();
+        newPhoneEntry.setName(Name);
 
-        System.out.println("Nhập số điện thoại: ");
-        PhoneNumber = input.next();
+        System.out.println("Nhập số số điện thoại: ");
+        int number = input.nextInt();
 
-        PhoneEntry newPhoneEntry = new PhoneEntry(Name, PhoneNumber);
+        for(int i = 0; i < number; i++) {
+            System.out.printf("Nhập số điện thoại %d: ", i + 1);
+            PhoneNumber = input.next();
+            newPhoneEntry.setPhoneNumber(PhoneNumber);
+        }
 
         if(phoneBook.AddEntry(newPhoneEntry)) {
             System.out.println("Thêm thành công!");
@@ -84,7 +94,20 @@ public class Main {
         }
     }
 
+    public static void findPhoneEntryByCharaters() {
+        input.nextLine();
+        System.out.println("Nhập ký tự (đoạn ký tự trong liên hệ ) cần tìm: ");
+        String Charaters = input.nextLine();
 
+        if(phoneBook.findEntryByCharaters(Charaters) == null) {
+            System.out.println("Liên hệ không tồn tại!");
+        }
+        else {
+            System.out.println("-------TÌM THẤY LIÊN HỆ--------");
+            System.out.println(phoneBook.findEntryByCharaters(Charaters));
+        }
+
+    }
     public static void EditContactName() {
         input.nextLine();
         System.out.println("Nhập tên cần sửa: ");
@@ -92,12 +115,26 @@ public class Main {
 
         System.out.println("Nhập tên mới: ");
         String newName = input.nextLine();
-        input.nextLine();
 
-        System.out.println("Nhập số điện thoại mới: ");
-        String newPhoneNumber = input.next();
+        System.out.println("Bạn có muốn sửa số điện thoại không?");
+        System.out.println("1. Có");
+        System.out.println("2. Không");
 
-        if(phoneBook.modifyEntry(oldName, newName, newPhoneNumber))
+        String newPhoneNumber = null;
+        int Number;
+
+        int choose = input.nextInt();
+        if(choose == 1) {
+            System.out.println("Nhập số số điện thoại mới: ");
+            Number = input.nextInt();
+            for(int i = 0; i < Number; i++) {
+                System.out.printf("Nhập số điện thoại %d: ", (i+1));
+                newPhoneNumber = input.next();
+                phoneBook.modifyNumber(oldName, newPhoneNumber);
+            }
+        }
+
+        if (phoneBook.modifyEntry(oldName, newName) && phoneBook.modifyNumber(newName, newPhoneNumber))
             System.out.println("Liên hệ đã sửa!");
         else {
             System.out.println("Liên hệ không tồn tại!");
@@ -106,10 +143,9 @@ public class Main {
 
     public static void DeletePhoneEntry() {
         System.out.println("Nhập tên liên hệ cần xóa: ");
-        String contactName = input.nextLine();
         input.nextLine();
-
-        if(!phoneBook.deleteEntry(contactName)) {
+        String entryName = input.nextLine();
+        if(!phoneBook.deleteEntry(entryName)) {
             System.out.println("Liên hệ không tồn tại!");
         }
         else {
