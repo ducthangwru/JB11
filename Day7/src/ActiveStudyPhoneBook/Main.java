@@ -31,7 +31,7 @@ public class Main {
                     AddPhoneEntry();
                     break;
                 case 2:
-                    EditContactName();
+                    EditContact();
                     break;
                 case 3:
                     DeletePhoneEntry();
@@ -65,7 +65,7 @@ public class Main {
         Name = input.nextLine();
         newPhoneEntry.setName(Name);
 
-        System.out.println("Nhập số số điện thoại: ");
+        System.out.println("Nhập số các số điện thoại: ");
         int number = input.nextInt();
 
         for(int i = 0; i < number; i++) {
@@ -108,7 +108,7 @@ public class Main {
         }
 
     }
-    public static void EditContactName() {
+    public static void EditContact() {
         input.nextLine();
         System.out.println("Nhập tên cần sửa: ");
         String oldName = input.nextLine();
@@ -125,7 +125,7 @@ public class Main {
 
         int choose = input.nextInt();
         if(choose == 1) {
-            System.out.println("Nhập số số điện thoại mới: ");
+            System.out.println("Nhập số các số điện thoại mới: ");
             Number = input.nextInt();
             for(int i = 0; i < Number; i++) {
                 System.out.printf("Nhập số điện thoại %d: ", (i+1));
